@@ -1,0 +1,3 @@
+Footprint - radius 600 mm
+Wheel Radius - 125mm
+Wheel Base - 393.787mm

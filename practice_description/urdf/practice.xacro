@@ -1,0 +1,165 @@
+<?xml version="1.0" ?>
+<robot name="practice" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find practice_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find practice_description)/urdf/practice.trans" />
+<xacro:include filename="$(find practice_description)/urdf/practice.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0 2.7212371556475855e-17 0.16906130665291902"/>
+    <mass value="11.336777546239329"/>
+    <inertia ixx="0.108725" ixy="0.0" ixz="-0.0" iyy="0.11472" iyz="0.0" izz="0.146245"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://practice_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://practice_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_wheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-1.1407541584168288e-13 -0.01991682776501391 -1.3877787807814457e-17"/>
+    <mass value="2.926164220555174"/>
+    <inertia ixx="0.011894" ixy="-0.0" ixz="-0.0" iyy="0.023049" iyz="0.0" izz="0.011894"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 0.196894 -0.125"/>
+    <geometry>
+      <mesh filename="package://practice_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 0.196894 -0.125"/>
+    <geometry>
+      <mesh filename="package://practice_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_wheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0 0.019916827765013967 -4.163336342344337e-17"/>
+    <mass value="2.9261642205551803"/>
+    <inertia ixx="0.011894" ixy="-0.0" ixz="-0.0" iyy="0.023049" iyz="0.0" izz="0.011894"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.196894 -0.125"/>
+    <geometry>
+      <mesh filename="package://practice_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.196894 -0.125"/>
+    <geometry>
+      <mesh filename="package://practice_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="castor_rear_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.1 1.8655985092861713e-17 -0.042072891623541206"/>
+    <mass value="7.653879838968424"/>
+    <inertia ixx="0.01147" ixy="0.0" ixz="0.0" iyy="0.01147" iyz="-0.0" izz="0.013392"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.1"/>
+    <geometry>
+      <mesh filename="package://practice_description/meshes/castor_rear_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.1"/>
+    <geometry>
+      <mesh filename="package://practice_description/meshes/castor_rear_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="castor_front_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.10000000000000002 1.8655985092861713e-17 -0.04107289162354122"/>
+    <mass value="7.653879838968424"/>
+    <inertia ixx="0.01147" ixy="0.0" ixz="-0.0" iyy="0.01147" iyz="-0.0" izz="0.013392"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.1"/>
+    <geometry>
+      <mesh filename="package://practice_description/meshes/castor_front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.1"/>
+    <geometry>
+      <mesh filename="package://practice_description/meshes/castor_front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Lidar__1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0 0.0 0.0500000000000001"/>
+    <mass value="4.022903845857066"/>
+    <inertia ixx="0.012486" ixy="0.0" ixz="0.0" iyy="0.012486" iyz="0.0" izz="0.018928"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.3"/>
+    <geometry>
+      <mesh filename="package://practice_description/meshes/Lidar__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.3"/>
+    <geometry>
+      <mesh filename="package://practice_description/meshes/Lidar__1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rev1" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 -0.196894 0.125"/>
+  <parent link="base_link"/>
+  <child link="right_wheel_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="Rev2" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 0.196894 0.125"/>
+  <parent link="base_link"/>
+  <child link="left_wheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rigid3" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.1"/>
+  <parent link="base_link"/>
+  <child link="castor_rear_1"/>
+</joint>
+
+<joint name="Rigid4" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.1"/>
+  <parent link="base_link"/>
+  <child link="castor_front_1"/>
+</joint>
+
+<joint name="Rigid5" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.3"/>
+  <parent link="base_link"/>
+  <child link="Lidar__1"/>
+</joint>
+
+</robot>
