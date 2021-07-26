@@ -1,0 +1,3 @@
+Footprint(radius) -  600mm
+Wheel base        -  410mm
+Wheel Diameter	  -  290mm

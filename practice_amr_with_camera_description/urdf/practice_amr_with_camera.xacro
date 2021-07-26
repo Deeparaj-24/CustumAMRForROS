@@ -1,0 +1,192 @@
+<?xml version="1.0" ?>
+<robot name="practice_amr_with_camera" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find practice_amr_with_camera_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find practice_amr_with_camera_description)/urdf/practice_amr_with_camera.trans" />
+<xacro:include filename="$(find practice_amr_with_camera_description)/urdf/practice_amr_with_camera.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-5.277720631101894e-17 0.0 0.19915232097480318"/>
+    <mass value="60.87974538645806"/>
+    <inertia ixx="1.482057" ixy="0.0" ixz="-0.0" iyy="1.444802" iyz="0.0" izz="2.095154"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://practice_amr_with_camera_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://practice_amr_with_camera_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Wheel_left_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0 0.024865996656190326 2.7755575615628914e-17"/>
+    <mass value="5.125383982129923"/>
+    <inertia ixx="0.031048" ixy="0.0" ixz="0.0" iyy="0.060081" iyz="-0.0" izz="0.031048"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.371492 -0.15"/>
+    <geometry>
+      <mesh filename="package://practice_amr_with_camera_description/meshes/Wheel_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.371492 -0.15"/>
+    <geometry>
+      <mesh filename="package://practice_amr_with_camera_description/meshes/Wheel_left_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Wheel_right_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-4.6477464540982916e-17 -0.02486599665619027 0.0"/>
+    <mass value="5.125383982129924"/>
+    <inertia ixx="0.031048" ixy="-0.0" ixz="-0.0" iyy="0.060081" iyz="0.0" izz="0.031048"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 0.371492 -0.15"/>
+    <geometry>
+      <mesh filename="package://practice_amr_with_camera_description/meshes/Wheel_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 0.371492 -0.15"/>
+    <geometry>
+      <mesh filename="package://practice_amr_with_camera_description/meshes/Wheel_right_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Lidar_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-4.636655135232854e-17 -2.318327567616427e-17 0.050000000000000044"/>
+    <mass value="10.275288773505132"/>
+    <inertia ixx="0.059813" ixy="-0.0" ixz="-0.0" iyy="0.059813" iyz="0.0" izz="0.104583"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.4035"/>
+    <geometry>
+      <mesh filename="package://practice_amr_with_camera_description/meshes/Lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.4035"/>
+    <geometry>
+      <mesh filename="package://practice_amr_with_camera_description/meshes/Lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="castor_rear_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.11999999999999997 2.926160208777979e-17 -0.03702750611246941"/>
+    <mass value="12.145892654119544"/>
+    <inertia ixx="0.025056" ixy="0.0" ixz="0.0" iyy="0.025056" iyz="0.0" izz="0.036582"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.0965"/>
+    <geometry>
+      <mesh filename="package://practice_amr_with_camera_description/meshes/castor_rear_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.0965"/>
+    <geometry>
+      <mesh filename="package://practice_amr_with_camera_description/meshes/castor_rear_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="castor_front_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.12000000000000004 2.926160208777979e-17 -0.03702750611246941"/>
+    <mass value="12.145892654119544"/>
+    <inertia ixx="0.025056" ixy="0.0" ixz="0.0" iyy="0.025056" iyz="0.0" izz="0.036582"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.0965"/>
+    <geometry>
+      <mesh filename="package://practice_amr_with_camera_description/meshes/castor_front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.0 -0.0965"/>
+    <geometry>
+      <mesh filename="package://practice_amr_with_camera_description/meshes/castor_front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.07000021863312561 -1.0119579867850366e-06 0.05000000000000002"/>
+    <mass value="2.2662572968115895"/>
+    <inertia ixx="0.015708" ixy="0.0" ixz="0.0" iyy="0.002537" iyz="-0.0" izz="0.014468"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.288 -0.0 -0.2035"/>
+    <geometry>
+      <mesh filename="package://practice_amr_with_camera_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.288 -0.0 -0.2035"/>
+    <geometry>
+      <mesh filename="package://practice_amr_with_camera_description/meshes/camera_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="left_wheel" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 0.371492 0.15"/>
+  <parent link="base_link"/>
+  <child link="Wheel_left_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="right_wheel" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 -0.371492 0.15"/>
+  <parent link="base_link"/>
+  <child link="Wheel_right_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="lidar" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.4035"/>
+  <parent link="base_link"/>
+  <child link="Lidar_1"/>
+</joint>
+
+<joint name="castor_1" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.0965"/>
+  <parent link="base_link"/>
+  <child link="castor_rear_1"/>
+</joint>
+
+<joint name="castor_2" type="fixed">
+  <origin rpy="0 0 0" xyz="0.0 0.0 0.0965"/>
+  <parent link="base_link"/>
+  <child link="castor_front_1"/>
+</joint>
+
+<joint name="camera" type="fixed">
+  <origin rpy="0 0 0" xyz="0.288 0.0 0.2035"/>
+  <parent link="base_link"/>
+  <child link="camera_1"/>
+</joint>
+
+</robot>
